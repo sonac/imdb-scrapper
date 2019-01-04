@@ -1,0 +1,48 @@
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial source changes: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	removed:Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	added: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	modified: Set(/mnt/c/Users/sonac/git/imdb-scrapper/src/main/scala/com/github/sonac/imdb/scrapper/pageparse/PageParser.scala, /mnt/c/Users/sonac/git/imdb-scrapper/src/main/scala/com/github/sonac/imdb/scrapper/datamodel/Movie.scala)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated products: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mExternal API changes: API Changes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mModified binary dependencies: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial directly invalidated classes: Set(com.github.sonac.imdb.scrapper.pageparse.PageParser, com.github.sonac.imdb.scrapper.pageparse.MoviePageParser, com.github.sonac.imdb.scrapper.datamodel.Movie)[0m
+[0m[[0m[0mdebug[0m] [0m[0m[0m
+[0m[[0m[0mdebug[0m] [0m[0mSources indirectly invalidated by:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	product: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	binary dep: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0m	external source: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated classes: Set(com.github.sonac.imdb.scrapper.pageparse.PageParser, com.github.sonac.imdb.scrapper.pageparse.MoviePageParser, com.github.sonac.imdb.scrapper.datamodel.Movie)[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll initially invalidated sources:Set(/mnt/c/Users/sonac/git/imdb-scrapper/src/main/scala/com/github/sonac/imdb/scrapper/pageparse/PageParser.scala, /mnt/c/Users/sonac/git/imdb-scrapper/src/main/scala/com/github/sonac/imdb/scrapper/datamodel/Movie.scala)[0m
+[0m[[0m[0minfo[0m] [0m[0mCompiling 2 Scala sources to /mnt/c/Users/sonac/git/imdb-scrapper/target/scala-2.12/classes ...[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.2.5:compile for Scala 2.12.8[0m
+[0m[[0m[0mdebug[0m] [0m[0mGetting org.scala-sbt:compiler-bridge_2.12:1.2.5:compile for Scala 2.12.8[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] Running cached compiler 3b015f17 for Scala compiler version 2.12.8[0m
+[0m[[0m[0mdebug[0m] [0m[0m[zinc] The Scala compiler is invoked with:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-bootclasspath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/home/sonac/.ivy2/cache/org.scala-lang/scala-library/jars/scala-library-2.12.8.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0m	-classpath[0m
+[0m[[0m[0mdebug[0m] [0m[0m	/mnt/c/Users/sonac/git/imdb-scrapper/target/scala-2.12/classes:/home/sonac/.ivy2/cache/net.ruippeixotog/scala-scraper_2.12/jars/scala-scraper_2.12-2.1.0.jar:/home/sonac/.ivy2/cache/com.github.nscala-time/nscala-time_2.12/jars/nscala-time_2.12-2.18.0.jar:/home/sonac/.ivy2/cache/joda-time/joda-time/jars/joda-time-2.9.9.jar:/home/sonac/.ivy2/cache/org.joda/joda-convert/jars/joda-convert-1.2.jar:/home/sonac/.ivy2/cache/net.sourceforge.htmlunit/htmlunit/jars/htmlunit-2.29.jar:/home/sonac/.ivy2/cache/xalan/xalan/jars/xalan-2.7.2.jar:/home/sonac/.ivy2/cache/xalan/serializer/jars/serializer-2.7.2.jar:/home/sonac/.ivy2/cache/org.apache.commons/commons-lang3/jars/commons-lang3-3.7.jar:/home/sonac/.ivy2/cache/org.apache.commons/commons-text/jars/commons-text-1.2.jar:/home/sonac/.ivy2/cache/org.apache.httpcomponents/httpmime/jars/httpmime-4.5.4.jar:/home/sonac/.ivy2/cache/org.apache.httpcomponents/httpclient/jars/httpclient-4.5.4.jar:/home/sonac/.ivy2/cache/org.apache.httpcomponents/httpcore/jars/httpcore-4.4.7.jar:/home/sonac/.ivy2/cache/commons-logging/commons-logging/jars/commons-logging-1.2.jar:/home/sonac/.ivy2/cache/commons-codec/commons-codec/jars/commons-codec-1.10.jar:/home/sonac/.ivy2/cache/net.sourceforge.htmlunit/htmlunit-core-js/jars/htmlunit-core-js-2.28.jar:/home/sonac/.ivy2/cache/net.sourceforge.htmlunit/neko-htmlunit/jars/neko-htmlunit-2.28.jar:/home/sonac/.ivy2/cache/xerces/xercesImpl/jars/xercesImpl-2.11.0.jar:/home/sonac/.ivy2/cache/xml-apis/xml-apis/jars/xml-apis-1.4.01.jar:/home/sonac/.ivy2/cache/net.sourceforge.cssparser/cssparser/jars/cssparser-0.9.24.jar:/home/sonac/.ivy2/cache/org.w3c.css/sac/jars/sac-1.3.jar:/home/sonac/.ivy2/cache/commons-io/commons-io/jars/commons-io-2.6.jar:/home/sonac/.ivy2/cache/commons-net/commons-net/jars/commons-net-3.6.jar:/home/sonac/.ivy2/cache/org.eclipse.jetty.websocket/websocket-client/jars/websocket-client-9.4.8.v20171121.jar:/home/sonac/.ivy2/cache/org.eclipse.jetty/jetty-client/jars/jetty-client-9.4.8.v20171121.jar:/home/sonac/.ivy2/cache/org.eclipse.jetty/jetty-http/jars/jetty-http-9.4.8.v20171121.jar:/home/sonac/.ivy2/cache/org.eclipse.jetty/jetty-util/jars/jetty-util-9.4.8.v20171121.jar:/home/sonac/.ivy2/cache/org.eclipse.jetty/jetty-io/jars/jetty-io-9.4.8.v20171121.jar:/home/sonac/.ivy2/cache/org.eclipse.jetty/jetty-xml/jars/jetty-xml-9.4.8.v20171121.jar:/home/sonac/.ivy2/cache/org.eclipse.jetty.websocket/websocket-common/jars/websocket-common-9.4.8.v20171121.jar:/home/sonac/.ivy2/cache/org.eclipse.jetty.websocket/websocket-api/jars/websocket-api-9.4.8.v20171121.jar:/home/sonac/.ivy2/cache/org.jsoup/jsoup/jars/jsoup-1.11.2.jar:/home/sonac/.ivy2/cache/org.scalaz/scalaz-core_2.12/bundles/scalaz-core_2.12-7.2.18.jar[0m
+[0m[[0m[0mdebug[0m] [0m[0mScala compilation took 0.9676597 s[0m
+[0m[[0m[0minfo[0m] [0m[0mDone compiling.[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidating (transitively) by inheritance from com.github.sonac.imdb.scrapper.datamodel.Movie...[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set(com.github.sonac.imdb.scrapper.datamodel.Movie)[0m
+[0m[[0m[0mdebug[0m] [0m[0mInvalidated by transitive inheritance dependency: Set(com.github.sonac.imdb.scrapper.datamodel.Movie)[0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of com.github.sonac.imdb.scrapper.search.MovieSearch. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of com.github.sonac.imdb.scrapper.pageparse.PageParser. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of com.github.sonac.imdb.scrapper.datamodel.IMDBObject. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of com.github.sonac.imdb.scrapper.pageparse.MoviePageParser. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of com.github.sonac.imdb.scrapper.search.IMDBSearch. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mNone of the modified names appears in source file of com.github.sonac.imdb.scrapper.Main. This dependency is not being considered for invalidation.[0m
+[0m[[0m[0mdebug[0m] [0m[0mChange NamesChange(com.github.sonac.imdb.scrapper.datamodel.Movie,ModifiedNames(changes = UsedName(director,[Default]), UsedName(boxOffice,[Default]), UsedName(writers,[Default]), UsedName(cast,[Default]))) invalidates 1 classes due to The com.github.sonac.imdb.scrapper.datamodel.Movie has the following regular definitions changed:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	UsedName(director,[Default]), UsedName(boxOffice,[Default]), UsedName(writers,[Default]), UsedName(cast,[Default]).[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> by transitive inheritance: Set(com.github.sonac.imdb.scrapper.datamodel.Movie)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m	> [0m
+[0m[[0m[0mdebug[0m] [0m[0m        [0m
+[0m[[0m[0mdebug[0m] [0m[0mNew invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mInitial set of included nodes: Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mPreviously invalidated, but (transitively) depend on new invalidations:[0m
+[0m[[0m[0mdebug[0m] [0m[0m	Set()[0m
+[0m[[0m[0mdebug[0m] [0m[0mAll newly invalidated classes after taking into account (previously) recompiled classes:Set()[0m

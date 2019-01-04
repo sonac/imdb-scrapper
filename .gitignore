@@ -93,10 +93,3 @@ fabric.properties
 
 # Editor-based Rest Client
 .idea/httpRequests
-
-.idea/
-README.md
-build.sbt
-project/
-src/
-target/
