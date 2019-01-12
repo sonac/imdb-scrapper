@@ -1,11 +1,11 @@
 package com.github.sonac.imdb.scrapper.datamodel
 
 import com.github.sonac.imdb.scrapper.pageparse.MoviePageParser
-import com.github.sonac.imdb.scrapper.rootUrl
 
 class Movie(title: String, url: String, posterLink: String) extends IMDBObject {
 
   private def getId: String = url.split("\\/")(4).substring(2)
+  private lazy val moviePageParser = MoviePageParser(getId)
 
   override def toString: String = {
     s"Movie($title, $url, $posterLink)"
@@ -16,27 +16,28 @@ class Movie(title: String, url: String, posterLink: String) extends IMDBObject {
   }
 
   def movieSummary: Map[String, String] = {
-    MoviePageParser(getId).summary
+    moviePageParser.summary
   }
 
-  def cast: List[Person] = ???
+  def cast: List[Person] = moviePageParser.cast
 
-  def director: Person = ???
+  def director(includePhotoLink: Boolean = false): Person = {
+    if (includePhotoLink) moviePageParser.director //TODO via go to persona page
+    else moviePageParser.director
+  }
 
-  def writers: List[Person] = ???
+  def writers(includePhotoLink: Boolean = false): List[Person] = {
+    if (includePhotoLink) moviePageParser.writers //TODO via go to persona page
+    else moviePageParser.writers
+  }
 
-  def boxOffice: Map[String, Int] = ???
+  def boxOffice: Map[String, Int] = moviePageParser.boxOffice
 
 }
 
 object Movie extends IMDBObject {
-  def apply(title: String, url: String, posterLink: String): Movie = {
-    new Movie(
-      title,
-      (if (url.contains("imdb")) url else rootUrl + url).split("\\?").head,
-      //Removing size of picture from url
-      posterLink.substring(0, posterLink.indexOf("_")) + "jpg")
+  def apply(title: String, url: String, posterLink: String) = {
+    new Movie(title, adaptObjectUrl(url), removeSizeFromImgUrl(posterLink))
   }
-
-  def apply(id: String): Movie = getObjectInfo(id).asInstanceOf[Movie]
+  def apply(id: String): Movie = MoviePageParser(id).getMovie
 }
