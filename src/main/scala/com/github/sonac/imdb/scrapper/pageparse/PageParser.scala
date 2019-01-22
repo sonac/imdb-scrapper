@@ -1,10 +1,10 @@
 package com.github.sonac.imdb.scrapper.pageparse
 
-import com.github.sonac.imdb.scrapper.datamodel.{Movie, Person}
+import com.github.sonac.imdb.scrapper.datamodel.{ Movie, Person }
 import com.github.sonac.imdb.scrapper.rootUrl
 import net.ruippeixotog.scalascraper.browser.JsoupBrowser
 import net.ruippeixotog.scalascraper.dsl.DSL.extractor
-import net.ruippeixotog.scalascraper.scraper.ContentExtractors.{attr, element, elementList, text, table}
+import net.ruippeixotog.scalascraper.scraper.ContentExtractors.{ attr, element, elementList, text, table }
 import net.ruippeixotog.scalascraper.dsl.DSL._
 
 trait PageParser {
@@ -19,7 +19,8 @@ case class MoviePageParser(movieId: String) extends PageParser {
   private lazy val moviePage = browser.get(movieUrl)
   private lazy val creditsPage = browser.get(creditsUrl)
   private lazy val creditsTables = creditsPage >> elementList(".simpleTable.simpleCreditsTable")
-  private val boxOfficeAttrs = List("Budget:",
+  private val boxOfficeAttrs = List(
+    "Budget:",
     "Opening Weekend USA:",
     "Gross USA:",
     "Cumulative Worldwide Gross:")
@@ -56,8 +57,7 @@ case class MoviePageParser(movieId: String) extends PageParser {
         .filter(el => (el >> text(".inline")) == "Stars:").head >> elementList("a[href]"))
         .map(el => el.text)
         .dropRight(1) //Removing See full cast & crew link
-        .reduce(_ + ", " + _)
-    )
+        .reduce(_ + ", " + _))
   }
 
   def cast: List[Person] = {
@@ -67,22 +67,24 @@ case class MoviePageParser(movieId: String) extends PageParser {
         vec.tail.head >?> extractor("a[href]", attr("href")),
         vec.head >?> extractor("img", attr("loadlate"))))
       .filter(opts => opts._1.isDefined && opts._2.isDefined).map(s => s match {
-      case (Some(x1), Some(x2), Some(x3)) => Person(x1, x2, x3)
-      case (Some(x1), Some(x2), None) => Person(x1, x2, "")
-    }).toList
+        case (Some(x1), Some(x2), Some(x3)) => Person(x1, x2, x3)
+        case (Some(x1), Some(x2), None) => Person(x1, x2, "")
+      }).toList
   }
 
   def director: Person = {
-    Person(creditsTables.head >> text("a"),
+    Person(
+      creditsTables.head >> text("a"),
       creditsTables.head >> extractor("a[href]", attr("href")),
       "")
   }
 
   def writers: List[Person] = {
     val writersRows = creditsTables.tail.head >> elementList(".name")
-    writersRows.map{el =>
+    writersRows.map { el =>
       val a = el >> element("a")
-      Person(a.text, a.attr("href"), "")}
+      Person(a.text, a.attr("href"), "")
+    }
   }
 
   def boxOffice: Map[String, Int] = {
@@ -102,7 +104,8 @@ case class PersonPageParser(personId: String) extends PageParser {
 
   def getPerson: Person = {
     val mainBlock = personPage >> element("tbody")
-    Person((mainBlock >> element("h1")) >> text(".itemprop"),
+    Person(
+      (mainBlock >> element("h1")) >> text(".itemprop"),
       personUrl,
       mainBlock >> extractor("img", attr("src")))
   }

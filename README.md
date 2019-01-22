@@ -8,6 +8,9 @@ and info regarding them.
 
 ## Usage
 
+To use Imdb Scrappe in your project, simply add to `build.sbt`:
+`libraryDependencies += "com.github.sonac" %% "imdb-scrapper" % "1.0"`
+
 Library has 3 main interfaces to interact through. Its `Movie`,
 `Person` and `MovieSearch`. For example to run search use:
 ```
