@@ -6,7 +6,7 @@ lazy val root = project.in(file("."))
   .settings(commonSettings: _*)
   .settings(
     name := "imdb-scrapper",
-    version := "1.0",
+    version := "1.0.1",
     libraryDependencies += "net.ruippeixotog" %% "scala-scraper" % "2.1.0"
   )
 
