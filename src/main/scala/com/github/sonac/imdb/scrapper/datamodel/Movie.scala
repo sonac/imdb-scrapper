@@ -2,7 +2,7 @@ package com.github.sonac.imdb.scrapper.datamodel
 
 import com.github.sonac.imdb.scrapper.pageparse.MoviePageParser
 
-class Movie(title: String, url: String, posterLink: String) extends IMDBObject {
+case class Movie(title: String, url: String, posterLink: String) extends IMDBObject {
 
   private def getId: String = url.split("\\/")(4).substring(2)
   private lazy val moviePageParser = MoviePageParser(getId)
